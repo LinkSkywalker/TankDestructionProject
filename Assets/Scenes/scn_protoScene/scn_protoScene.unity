@@ -2785,7 +2785,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1201245069393802, guid: 58c5525ad2d07534ebf35df6f56b7206, type: 2}
       propertyPath: m_TagString
-      value: MainCamera
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 114002271964910264, guid: 58c5525ad2d07534ebf35df6f56b7206,
         type: 2}
@@ -2827,6 +2827,10 @@ Prefab:
     - target: {fileID: 1535652518026900, guid: 58c5525ad2d07534ebf35df6f56b7206, type: 2}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535652518026900, guid: 58c5525ad2d07534ebf35df6f56b7206, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114285540320308618, guid: 58c5525ad2d07534ebf35df6f56b7206, type: 2}
@@ -6381,7 +6385,7 @@ GameObject:
   - component: {fileID: 1071049732}
   - component: {fileID: 1071049731}
   m_Layer: 0
-  m_Name: obj_teleporterOut
+  m_Name: teleporter2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6398,9 +6402,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bfb877a08990274fb5ec54b17c89e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleporterOutput: {fileID: 1249815107}
-  offsetHeight: 1
-  isTeleporting: 0
+  destination: {fileID: 1249815107}
+  wasteleported: {fileID: 0}
 --- !u!65 &1071049732
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6408,11 +6411,11 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1071049730}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.8370581, z: 1}
+  m_Center: {x: 0, y: 0.41852903, z: 0}
 --- !u!23 &1071049733
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7130,7 +7133,7 @@ GameObject:
   - component: {fileID: 1249815108}
   - component: {fileID: 1249815112}
   m_Layer: 0
-  m_Name: obj_teleporterIn
+  m_Name: teleporter1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7143,11 +7146,11 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1249815107}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.7650881, z: 1}
+  m_Center: {x: 0, y: 0.38254404, z: 0}
 --- !u!23 &1249815109
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7214,9 +7217,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bfb877a08990274fb5ec54b17c89e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleporterOutput: {fileID: 1071049730}
-  offsetHeight: 1
-  isTeleporting: 0
+  destination: {fileID: 1071049730}
+  wasteleported: {fileID: 0}
 --- !u!1001 &1257995880
 Prefab:
   m_ObjectHideFlags: 0

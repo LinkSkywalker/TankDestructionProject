@@ -81,7 +81,7 @@ GameObject:
   - component: {fileID: 114285540320308618}
   m_Layer: 0
   m_Name: player_player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -375,6 +375,7 @@ MonoBehaviour:
   playerCanon: {fileID: 4726334583756152}
   missile: {fileID: 1407543863749774, guid: d9fa73c225492644cba2169b2ba15193, type: 2}
   mainCam: {fileID: 20647110228325912}
+  m_IsInTeleporterZone: 0
   camSpeed: 25
   sensitivityX: 50
   sensitivityY: 50

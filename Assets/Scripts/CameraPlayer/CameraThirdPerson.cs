@@ -15,6 +15,7 @@ public class CameraThirdPerson : NetworkBehaviour
     public Transform playerCanon;
     public GameObject missile;
     public Camera mainCam;
+    public bool m_IsInTeleporterZone;
 
     [Header("Camera Settings")]
     public float camSpeed = 50;
