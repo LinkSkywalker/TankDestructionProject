@@ -107,6 +107,8 @@ public class CameraThirdPerson : NetworkBehaviour
             newMissile.transform.position = playerCanon.transform.position;
             newMissile.GetComponent<Rigidbody>().AddForce(playerHead.transform.forward * playerCanonForce, ForceMode.Impulse);
             newMissile.transform.rotation = playerHead.transform.rotation;
+
+            NetworkServer.Spawn(newMissile);
         }
 
         if (totalAmmo <= 0)
