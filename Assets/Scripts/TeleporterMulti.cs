@@ -22,7 +22,7 @@ public class TeleporterMulti : MonoBehaviour
 
         if(gameObject.name == teleporterOutput.name)
         {
-            isTeleporting = true;
+            isTeleporting = false;
         }
     }
 }

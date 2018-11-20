@@ -77,6 +77,8 @@ GameObject:
   - component: {fileID: 54036080114295616}
   - component: {fileID: 136432689532184246}
   - component: {fileID: 114002271964910264}
+  - component: {fileID: 114376439104641758}
+  - component: {fileID: 114285540320308618}
   m_Layer: 0
   m_Name: player_player
   m_TagString: Untagged
@@ -374,11 +376,69 @@ MonoBehaviour:
   missile: {fileID: 1407543863749774, guid: d9fa73c225492644cba2169b2ba15193, type: 2}
   mainCam: {fileID: 20647110228325912}
   camSpeed: 25
+  sensitivityX: 50
+  sensitivityY: 50
   playerSpeed: 5
   playerRotationSpeed: 25
   playerCanonForce: 100
-  sensitivityX: 50
-  sensitivityY: 50
+  playerShootRecoil: 10
+  totalAmmo: 10
+  delayAttack: 2
+  reloadingFeedback: {fileID: 0}
+  remainingAmmoText: {fileID: 0}
+--- !u!114 &114285540320308618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1549670499797230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 3
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &114376439104641758
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1549670499797230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 88
+    i1: 197
+    i2: 82
+    i3: 90
+    i4: 210
+    i5: 208
+    i6: 117
+    i7: 52
+    i8: 235
+    i9: 243
+    i10: 93
+    i11: 246
+    i12: 245
+    i13: 107
+    i14: 114
+    i15: 6
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
 --- !u!114 &114859231802423428
 MonoBehaviour:
   m_ObjectHideFlags: 1

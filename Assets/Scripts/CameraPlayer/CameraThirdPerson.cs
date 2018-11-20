@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 
-public class CameraThirdPerson : MonoBehaviour {
+public class CameraThirdPerson : NetworkBehaviour
+{
 
     [Header("Object Selections")]
     public Transform camPlace;
@@ -38,6 +40,12 @@ public class CameraThirdPerson : MonoBehaviour {
     float axisX;
     float axisY;
 
+    private void Awake()
+    {
+        reloadingFeedback = GameObject.FindObjectOfType<Image>();
+        remainingAmmoText = GameObject.FindObjectOfType<Text>();
+    }
+
     private void Start()
     {
         remainingAmmoText.text = totalAmmo.ToString();
@@ -45,6 +53,11 @@ public class CameraThirdPerson : MonoBehaviour {
 
     private void Update()
     {
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+
         // Take axis
         axisX = Input.GetAxis("Mouse X") * sensitivityX * Time.deltaTime;
         axisY = Input.GetAxis("Mouse Y") * sensitivityY * Time.deltaTime;
