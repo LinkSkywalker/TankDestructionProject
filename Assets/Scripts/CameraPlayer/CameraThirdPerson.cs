@@ -45,6 +45,12 @@ public class CameraThirdPerson : NetworkBehaviour
     {
         reloadingFeedback = GameObject.FindObjectOfType<Image>();
         remainingAmmoText = GameObject.FindObjectOfType<Text>();
+        mainCam = FindObjectOfType<Camera>();
+    }
+
+    public override void OnStartLocalPlayer()
+    {
+        FindObjectOfType<CameraFollowPlayer>().setTarget(gameObject.transform);
     }
 
     private void Start()
